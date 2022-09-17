@@ -21,6 +21,11 @@ export class GetPlayersScoreController {
   async handle(httpRequest) {
     const { params } = httpRequest;
 
-   await this.#getPlayersScoreUseCase.getPlayersScore(params);
+    const playersScore = await this.#getPlayersScoreUseCase.getPlayersScore(params);
+
+    return {
+      statusCode: 200,
+      body: playersScore,
+    };
   }
 }
