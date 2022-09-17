@@ -72,5 +72,16 @@ describe('GetPlayersScoreController', () => {
 
       expect(getPlayersScoreUseCaseSpy.params).toEqual(httpRequest.params);
     });
+
+    test('should return 200 with the getPlayersScoreUseCase result', async () => {
+      const { sut, getPlayersScoreUseCaseSpy } = makeSut();
+      const httpRequest = {}
+      const httpResponse = await sut.handle(httpRequest);
+
+      expect(httpResponse).toEqual({
+        statusCode: 200,
+        body: getPlayersScoreUseCaseSpy.getPlayersScoreResult,
+      });
+    })
   })
 })
