@@ -83,5 +83,20 @@ describe('GetPlayersScoreController', () => {
         body: getPlayersScoreUseCaseSpy.getPlayersScoreResult,
       });
     })
+
+    test('should return 500 if getPlayersScoreUseCase throws', async () => {
+      const { sut, getPlayersScoreUseCaseSpy } = makeSut();
+      const mockedError = new Error('any_error')
+      vi.spyOn(getPlayersScoreUseCaseSpy, 'getPlayersScore').mockRejectedValueOnce(
+        mockedError
+      );
+      const httpRequest = {}
+      const httpResponse = await sut.handle(httpRequest);
+
+      expect(httpResponse).toEqual({
+        statusCode: 500,
+        body: mockedError,
+      });
+    })
   })
 })
