@@ -1,4 +1,5 @@
 import { InjectionError } from '../../../utils/errors';
+import { ok, serverError } from '../../helpers/http-response';
 
 export class GetPlayersScoreController {
   #getPlayersScoreUseCase = null;
@@ -19,13 +20,14 @@ export class GetPlayersScoreController {
   }
 
   async handle(httpRequest) {
+   try {
     const { params } = httpRequest;
 
     const playersScore = await this.#getPlayersScoreUseCase.getPlayersScore(params);
 
-    return {
-      statusCode: 200,
-      body: playersScore,
-    };
+    return ok(playersScore);
+   } catch (error) {
+    return serverError(error)
+   }
   }
 }

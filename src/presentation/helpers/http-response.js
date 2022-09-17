@@ -4,3 +4,10 @@ export function ok(data) {
     body: data,
   };
 }
+
+export function serverError(error) {
+  return {
+    statusCode: error.statusCode? error.statusCode : 500,
+    body: error,
+  };
+}
