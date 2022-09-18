@@ -1,4 +1,4 @@
-export class GetPlayersScoreRepository {
+export class GetPlayersScoreFirebaseRepository {
   #firebaseDatabase
   constructor({
     firebaseDatabase

@@ -1,6 +1,6 @@
 import { afterAll, beforeEach, describe, expect, test } from 'vitest'
-import { GetPlayersScoreRepository } from '.'
-import firebaseTestHelpers from '../../../../tests/helpers/firebase-test-helpers'
+import { GetPlayersScoreFirebaseRepository } from '.'
+import firebaseTestHelpers from '../../../../../tests/helpers/firebase-test-helpers'
 
 async function makePlayerScore() {
   const result = await firebaseTestHelpers.insertDataWithRef('ranking', {
@@ -15,9 +15,9 @@ async function makePlayerScore() {
 
 let database
 const projectId = 'test-project'
-describe('GetPlayerScoreRepository', () => {
+describe('GetPlayersScoreFirebaseRepository', () => {
   function makeSut(firebaseDatabase) {
-    const sut = new GetPlayersScoreRepository({
+    const sut = new GetPlayersScoreFirebaseRepository({
       firebaseDatabase,
     })
 
@@ -34,7 +34,7 @@ describe('GetPlayerScoreRepository', () => {
   afterAll(async () => {
     await firebaseTestHelpers.reset()
   })
-  describe('getPlayersScore', () => {
+  describe('getPlayersScore()', () => {
     test('should return all the players', async () => {
       const playerResult = await makePlayerScore()
 

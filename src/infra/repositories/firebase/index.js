@@ -1,0 +1,1 @@
+export * from './get-players-score-firebase-repository'
