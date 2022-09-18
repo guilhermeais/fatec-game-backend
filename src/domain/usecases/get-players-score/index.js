@@ -1,5 +1,5 @@
 import { InjectionError } from '../../../utils/errors';
-export default class GetPlayersScore {
+export  class GetPlayersScore {
   #getPlayersScoreRepository = null;
   
   #contructorValidator() {

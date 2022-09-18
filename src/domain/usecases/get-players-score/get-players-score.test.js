@@ -1,5 +1,5 @@
 import { test, describe, expect, vi } from 'vitest'
-import GetPlayersScore from '.'
+import {GetPlayersScore} from '.'
 import { InjectionError } from '../../../utils/errors'
 
 describe('GetPlayerScore UseCase', () => {
