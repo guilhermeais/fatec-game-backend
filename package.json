@@ -1,9 +1,11 @@
 {
   "dependencies": {
+    "cross-env": "^7.0.3",
     "express": "^4.18.1",
     "firebase": "^9.10.0"
   },
   "devDependencies": {
+    "@firebase/rules-unit-testing": "^2.0.4",
     "nodemon": "^2.0.19",
     "vitest": "^0.23.2"
   },
@@ -11,7 +13,7 @@
   "version": "1.0.0",
   "main": "vitest.config.js",
   "scripts": {
-    "test": "vitest"
+    "test": "cross-env NODE_ENV=testing vitest"
   },
   "keywords": [],
   "author": "",
