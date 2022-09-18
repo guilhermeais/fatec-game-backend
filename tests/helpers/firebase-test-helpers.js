@@ -7,6 +7,7 @@ const userAuth = {
 
 class FirebaseTestHelpers {
   async connect({ projectId = 'test-project' } = {}) {
+    this.projectId = projectId
     this.testEnvironment = await initializeTestEnvironment({
       projectId,
       database: {
@@ -22,6 +23,7 @@ class FirebaseTestHelpers {
   }
 
   async reset() {
+    await this.testEnvironment.clearDatabase({ projectId: this.projectId })
     await this.testEnvironment.cleanup()
     this.database = null
   }
@@ -35,9 +37,11 @@ class FirebaseTestHelpers {
     return new Promise((resolve, reject) => {
       ref.set(data, error => {
         if (!error) {
-          ref.once('value', data => {
+          ref.on('value', data => {
             resolve(data.val())
           })
+        } else {
+          reject(error)
         }
       })
     })
