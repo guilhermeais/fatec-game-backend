@@ -14,10 +14,12 @@
   "version": "1.0.0",
   "main": "vitest.config.js",
   "scripts": {
+    "start": "nodemon src/index.js",
     "test": "cross-env NODE_ENV=testing vitest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "type": "module"
 }
