@@ -63,20 +63,18 @@ describe('GetPlayersScoreController', () => {
   describe('handle()', () => {
     test('should call GetPlayersUseCase with correct values', async () => {
       const { sut, getPlayersScoreUseCaseSpy } = makeSut();
-      const httpRequest = {
-        params: {
-          playerName: 'any_player',
-        }
+      const request = {
+          playerName: 'any_player'
       }
-      await sut.handle(httpRequest);
+      await sut.handle(request);
 
-      expect(getPlayersScoreUseCaseSpy.params).toEqual(httpRequest.params);
+      expect(getPlayersScoreUseCaseSpy.params).toEqual(request);
     });
 
     test('should return 200 with the getPlayersScoreUseCase result', async () => {
       const { sut, getPlayersScoreUseCaseSpy } = makeSut();
-      const httpRequest = {}
-      const httpResponse = await sut.handle(httpRequest);
+      const request = {}
+      const httpResponse = await sut.handle(request);
 
       expect(httpResponse).toEqual({
         statusCode: 200,
@@ -90,8 +88,8 @@ describe('GetPlayersScoreController', () => {
       vi.spyOn(getPlayersScoreUseCaseSpy, 'getPlayersScore').mockRejectedValueOnce(
         mockedError
       );
-      const httpRequest = {}
-      const httpResponse = await sut.handle(httpRequest);
+      const request = {}
+      const httpResponse = await sut.handle(request);
 
       expect(httpResponse).toEqual({
         statusCode: 500,
