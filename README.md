@@ -1,6 +1,6 @@
 # fatec-game-backend 🚀
 
-Uma **API REST**, criada com **TDD**, **Clean Architecture**, **DDD** e **SOLID** criada por demanda de um trabalho de faculdade (FATEC Franca).
+Uma **API REST** com **TDD**, **Clean Architecture**, **DDD** e **SOLID** criada por demanda de um trabalho da faculdade (FATEC Franca).
 
 __Eu fiz questão de utilizar bastante engenharia que aprendi nos ultimos meses, já que queria por esses conhecimentos em prática  😅.__
 
