@@ -9,3 +9,6 @@ Basicamente, criamos um jogo utilizando a plataforma [**Construct3**](construct.
 É um jogo top-down, bem simples... 
 
 Ele faz algumas requisições para o **Firebase** e lá salva os scores dos jogadores, sendo assim, o objetivo dessa API é não só puxar esses dados, mas também, gerencia-los de uma maneira melhor, para que possamos criar um front-end encima dessa API e exibir uma dashboard com as informações dos jogadores, onde inicialmente, será apenas o nome e o score dele.
+
+# Como rodar:
+🚧Em breve...🚧 
