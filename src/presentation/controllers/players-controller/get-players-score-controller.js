@@ -19,11 +19,13 @@ export class GetPlayersScoreController {
     this.#constructorValidator();
   }
 
-  async handle(httpRequest) {
+  async handle(request) {
    try {
-    const { params } = httpRequest;
+    const { playerName } = request;
 
-    const playersScore = await this.#getPlayersScoreUseCase.getPlayersScore(params);
+    const playersScore = await this.#getPlayersScoreUseCase.getPlayersScore({
+      playerName
+    });
 
     return ok(playersScore);
    } catch (error) {
