@@ -5,6 +5,7 @@ import request from 'supertest'
 describe('Players Routes', () => {
   beforeAll(async () => {
     await firebaseTestHelpers.connect()
+    await firebaseTestHelpers.testEnvironment.clearDatabase()
   })
 
   beforeEach(async () => {

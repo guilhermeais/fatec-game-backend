@@ -15,7 +15,6 @@ async function makePlayerScore({ playerName = 'guilherme', score = 100 } = {}) {
 }
 
 let database
-const projectId = 'test-project'
 describe('GetPlayersScoreFirebaseRepository', () => {
   function makeSut(firebaseDatabase) {
     const sut = new GetPlayersScoreFirebaseRepository({
@@ -26,10 +25,11 @@ describe('GetPlayersScoreFirebaseRepository', () => {
       sut,
     }
   }
+
   beforeEach(async () => {
-    await firebaseTestHelpers.connect({ projectId })
+    await firebaseTestHelpers.connect()
     database = firebaseTestHelpers.database
-    await firebaseTestHelpers.testEnvironment.clearDatabase({ projectId })
+    await firebaseTestHelpers.testEnvironment.clearDatabase()
   })
 
   afterAll(async () => {
