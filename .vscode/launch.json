@@ -10,7 +10,12 @@
       "name": "Docker: Attach to Node",
       "remoteRoot": "/usr/src/fatec-game-backend",
       "port": 9222
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach to Node",
+      "port": 9222
     }
-
   ]
 }
