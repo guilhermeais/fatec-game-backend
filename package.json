@@ -7,16 +7,23 @@
   },
   "devDependencies": {
     "@firebase/rules-unit-testing": "^2.0.4",
+    "@vitest/coverage-istanbul": "^0.23.4",
     "nodemon": "^2.0.19",
     "supertest": "^6.2.4",
+    "vite": "^3.1.3",
     "vitest": "^0.23.2"
   },
   "name": "fatec-game-backend",
   "version": "1.0.0",
   "main": "src/main/server.js",
   "scripts": {
+    "debug": "nodemon --experimental-specifier-resolution=node src/main/server.js --inspect=0.0.0.0:9222 --nolazy ./src/main/server.js",
     "start": "nodemon --experimental-specifier-resolution=node src/main/server.js ",
-    "test": "cross-env NODE_ENV=testing vitest"
+    "start:docker": "docker-compose up api",
+    
+    "test": "cross-env NODE_ENV=testing vitest",
+    "test:unit": "npm run test -- --config vitest.unit.config.js",
+    "test:integration": "npm run test -- --config vitest.integration.config.js"
   },
   "keywords": [],
   "author": "Guilherme Teixeira Ais",
