@@ -17,7 +17,7 @@
   "version": "1.0.0",
   "main": "src/main/server.js",
   "scripts": {
-    "debug": "nodemon --experimental-specifier-resolution=node src/main/server.js --inspect=0.0.0.0:9222 --nolazy ./src/main/server.js",
+    "debug": "nodemon --experimental-specifier-resolution=node -L --watch  src/main/server.js --inspect=0.0.0.0:9222 --nolazy ./src/main/server.js",
     "start": "nodemon --experimental-specifier-resolution=node src/main/server.js ",
     "start:docker": "docker-compose up api",
 
