@@ -2,14 +2,13 @@ version: "3"
 services:
   api:
     container_name: api-container
-    image: node:12
+    image: node:16.17.0
     working_dir: /usr/src/fatec-game-backend
     restart: always
-    command: bash -c "npm install --only=prod && npm run debug"
-    env_file:
-      - .env
+    command: bash -c "npm i --omit=dev --silent && npm run debug"
     volumes:
       - ./:/usr/src/fatec-game-backend/
+      - '/usr/src/fatec-game-backend/node_modules'
     ports:
-      - "${PORT-3000}:3000"
+      - "3000:3000"
       - "9222:9222"
