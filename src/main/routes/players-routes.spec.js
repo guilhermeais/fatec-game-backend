@@ -12,6 +12,7 @@ describe('Players Routes', () => {
   })
 
   afterAll(async () => {
+    await firebaseTestHelpers.testEnvironment.clearDatabase()
     await firebaseTestHelpers.reset()
   })
 
