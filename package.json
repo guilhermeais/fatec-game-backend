@@ -17,13 +17,20 @@
   "version": "1.0.0",
   "main": "src/main/server.js",
   "scripts": {
+    "firebase:emulator": "docker-compose up firebase-emulator -d",
+
     "debug": "nodemon --experimental-specifier-resolution=node -L --watch  src/main/server.js --inspect=0.0.0.0:9222 --nolazy ./src/main/server.js",
     "start": "nodemon --experimental-specifier-resolution=node src/main/server.js ",
     "start:docker": "docker-compose up api",
 
     "test": "cross-env NODE_ENV=testing vitest",
     "test:unit": "npm run test -- --config vitest.unit.config.js",
-    "test:integration": "npm run test -- --config vitest.integration.config.js"
+    "test:integration": "npm run firebase:emulator && npm run test -- --config vitest.integration.config.js",
+    "posttest:integration": "docker-compose down",
+
+    "test:coverage": "npm run firebase:emulator && npm run test -- --coverage",
+    "posttest:coverage": "docker-compose down"
+
   },
   "keywords": [],
   "author": "Guilherme Teixeira Ais",
