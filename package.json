@@ -20,7 +20,7 @@
     "debug": "nodemon --experimental-specifier-resolution=node src/main/server.js --inspect=0.0.0.0:9222 --nolazy ./src/main/server.js",
     "start": "nodemon --experimental-specifier-resolution=node src/main/server.js ",
     "start:docker": "docker-compose up api",
-    
+
     "test": "cross-env NODE_ENV=testing vitest",
     "test:unit": "npm run test -- --config vitest.unit.config.js",
     "test:integration": "npm run test -- --config vitest.integration.config.js"
@@ -29,5 +29,8 @@
   "author": "Guilherme Teixeira Ais",
   "license": "ISC",
   "description": "API Rest com TDD, Clean Architeture e Design Patterns, construida para um trabalho de faculdade (FATEC)",
-  "type": "module"
+  "type": "module",
+  "engines": {
+    "node": ">=16.0.0"
+  }
 }
