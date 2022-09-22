@@ -1,7 +1,7 @@
 version: "3"
 services:
   api:
-    container_name: api-container
+    container_name: fatec-game-backned-container
     image: node:16.17.0
     working_dir: /usr/src/fatec-game-backend
     restart: always
@@ -13,6 +13,7 @@ services:
       - "3000:3000"
       - "9222:9222"
   firebase-emulator:
+    container_name: firebase-emulator-container
     build:
       context: .
       dockerfile: Dockerfile.firebase.emulator
