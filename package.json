@@ -14,7 +14,7 @@
     "vitest": "^0.23.2"
   },
   "name": "fatec-game-backend",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/main/server.js",
   "scripts": {
     "firebase:emulator": "docker-compose up -d firebase-emulator && bash wait-for-firebase-emulator-container.sh",
