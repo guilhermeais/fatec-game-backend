@@ -34,6 +34,6 @@
   "description": "API Rest com TDD, Clean Architeture e Design Patterns, construida para um trabalho de faculdade (FATEC)",
   "type": "module",
   "engines": {
-    "node": ">=16.0.0"
+    "node": "16.x"
   }
 }
