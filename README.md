@@ -1,4 +1,7 @@
 # fatec-game-backend 🚀
+<a href="https://render.com/deploy?repo=https://github.com/guilhermeais/fatec-game-backend">
+  <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render">
+</a>
 
 Uma **API REST** com **TDD**, **Clean Architecture**, **DDD** e **SOLID** criada por demanda de um trabalho da faculdade (FATEC Franca).
 

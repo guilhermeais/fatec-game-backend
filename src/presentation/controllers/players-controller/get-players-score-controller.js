@@ -22,7 +22,7 @@ export class GetPlayersScoreController {
   async handle(request) {
    try {
     const { playerName } = request;
-
+    
     const playersScore = await this.#getPlayersScoreUseCase.getPlayersScore({
       playerName
     });
