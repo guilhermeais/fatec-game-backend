@@ -7,7 +7,7 @@ Uma **API REST** com **TDD**, **Clean Architecture**, **DDD** e **SOLID** criada
 
 __Eu fiz questão de utilizar bastante engenharia que aprendi nos ultimos meses, já que queria por esses conhecimentos em prática  😅.__
 
-Basicamente, criamos um jogo utilizando a plataforma [**Construct3**](construct.net/), onde logo, colocarei o deploy dele aqui.
+Basicamente, criamos um jogo utilizando a plataforma [**Construct3**](construct.net/), para jogar, é só <a target="_blank" href="https://fatec-game-game.netlify.app/" >clicar aqui</a>.
 
 É um jogo top-down, bem simples... 
 
