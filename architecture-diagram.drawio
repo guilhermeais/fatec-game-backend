@@ -109,7 +109,7 @@
                 <mxCell id="35" style="edgeStyle=none;rounded=0;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=11;fontColor=none;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="zkfFHV4jXpPFQw0GAbJ--0" target="2">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="36" value="&lt;font color=&quot;#fffcff&quot; style=&quot;font-size: 8px&quot;&gt;Como Javascript não tem tipagem, essa controller&lt;br&gt;simplesmente representa um padrão que as Controller&amp;nbsp;&lt;br&gt;da aplicação seguem&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;fontSize=11;fontColor=none;rounded=1;glass=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+                <mxCell id="36" value="&lt;font style=&quot;font-size: 8px&quot;&gt;Como Javascript não tem tipagem, essa controller&lt;br&gt;simplesmente representa um padrão que as Controller&amp;nbsp;&lt;br&gt;da aplicação seguem&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;fontSize=11;fontColor=none;rounded=1;glass=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
                     <mxGeometry x="190" y="50" width="210" height="50" as="geometry"/>
                 </mxCell>
             </root>
