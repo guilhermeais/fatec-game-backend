@@ -14,7 +14,19 @@ Basicamente, criamos um jogo utilizando a plataforma [**Construct3**](construct.
 Ele faz algumas requisições para o **Firebase** e lá salva os scores dos jogadores, sendo assim, o objetivo dessa API é não só puxar esses dados, mas também, gerencia-los de uma maneira melhor, para que possamos criar um front-end encima dessa API e exibir uma dashboard com as informações dos jogadores, onde inicialmente, será apenas o nome e o score dele.
 
 > # Como rodar
-<h3  align="center">🚧Em breve...🚧 </h3>
+### Testes 🔥
+A aplicação utiliza o **vitest** como test runner e possui camadas de testes unitários e testes de integração separados, os testes unitários contém `.test` e os de integração possuí `.spec`. 
+
+Os comandos repsonsáveis por rodarem os testes são:
+- `npm run test:unit`: Roda os testes unitários.
+- `npm run test:integration`: Roda os testes de integração  
+  **ATENÇÃO**: Para rodar os testes de integração, é utilizado o **firebase-emulator**, já que um dos repositórios precisa do firebase para funcionar. Logo, para um teste mais real, o **firebase database é emulado em um container docker**, sendo assim, **para conseguir rodar os testes de integração é necessário ter o ´docker compose` instalado na máquina**.
+- `npm run test:coverage`: Roda todos os testes e gera um relatório de cobertura de testes no final.
+
+### Aplicação 🚀
+- `npm run start:docker`: Roda a aplicação utilizando o container docker (necessário ter o docker compose para funcionar);
+- `npm run start`: Roda a aplicação com **nodemon**;
+- `npm run debug`: Roda a aplicação e abre um socket na porta 9222, onde é possível debugar ela utilizando o debugger do VsCode.
 
 > # Documentação
 <h3  align="center">🚧Em breve...🚧 </h3>
