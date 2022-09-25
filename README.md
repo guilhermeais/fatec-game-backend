@@ -29,7 +29,11 @@ Os comandos repsonsáveis por rodarem os testes são:
 - `npm run debug`: Roda a aplicação e abre um socket na porta 9222, onde é possível debugar ela utilizando o debugger do VsCode.
 
 > # Documentação
-<h3  align="center">🚧Em breve...🚧 </h3>
+### Arquitetura 🏗️
+A arquitetura da aplicação foi desenvolvida aplicando alguns principios SOLID, com o intuito de ser desacoplada, fácil de testar e fácil de mudar.
+
+**Camadas**:
+![image](https://user-images.githubusercontent.com/73388069/192162291-e48ab794-31fc-477b-8aa3-ceb1d3d7d9a9.png)
 
 > # Features
 <h3  align="center">🚧Em breve...🚧 </h3>
