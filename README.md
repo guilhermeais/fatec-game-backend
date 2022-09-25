@@ -30,10 +30,28 @@ Os comandos repsonsáveis por rodarem os testes são:
 
 > # Documentação
 ### Arquitetura 🏗️
-A arquitetura da aplicação foi desenvolvida aplicando alguns principios SOLID, com o intuito de ser desacoplada, fácil de testar e fácil de mudar.
+A arquitetura foi desenvolvida baseada no Clean Architecture, utilizando alguns principios SOLID com o objetivo da aplicação ser desacoplada, fácil de testar e fácil de mudar...
+
+![architecture-diagram](https://user-images.githubusercontent.com/73388069/192162471-9b337daa-0ce4-4f4f-a1ec-47a9fb719b6d.png)
 
 **Camadas**:
-![image](https://user-images.githubusercontent.com/73388069/192162291-e48ab794-31fc-477b-8aa3-ceb1d3d7d9a9.png)
+- **Domain**:
+  Camada onde se encontra os **casos de usos** da aplicação, essa camada é a camada mais protegida da nossa aplicação, já que ela representa nossas regras de negócios e tudo mais... Logo, o ideal é que ela não dependa de nenhuma outra camada.
+![image](https://user-images.githubusercontent.com/73388069/192162576-e36d4538-9897-4356-ac04-5b6f07095675.png)
+
+- **Infra**: 
+  Nela temos a implementação de dependencias do caso de uso, como os **repositories**, no exemplo, nós criamos a `GetPlayersScoreRepositoryFirebase`, onde ele implementa o repositório utilizando o Firebase. Poderiamos fazer o mesmo repositório utilizando MySQL, por exemplo... 
+
+ ![image](https://user-images.githubusercontent.com/73388069/192162675-dcd09ab8-0c99-4415-ade0-bdd3c0ee0eea.png)
+
+- **Presentation**: 
+  Nessa camada fica tudo o que vamos apresentar para o nosso cliente. Nossos **controllers**, por exemplo, ficam aqui, já que eles serão os responsáveis por passar os dados de outras camadas para o cliente final. Temos um exemplo de controller, a **GetPlaeyrsScoreController**, ela tem dependencia do nosso caso de uso **GetPlayersScore** e utiliza ele para aprensentar ao usuário final. 
+  
+  A camada de **presentation** segue um padrão para criar as **controllers**, de modo que quando formos compor a aplicação (na pasta **main**), nós possamos adaptar esse padrão para alguma lib externa (como o express ou graphql).
+  
+  ![image](https://user-images.githubusercontent.com/73388069/192162854-5be18d7f-f1cc-4b99-9ec0-4e59154d5d78.png)
+
+
 
 > # Features
 <h3  align="center">🚧Em breve...🚧 </h3>
